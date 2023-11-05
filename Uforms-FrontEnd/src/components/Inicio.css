@@ -1,0 +1,246 @@
+@import 'variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+/* General */
+
+@keyframes changeBackgroundColor {
+  0% { background-color: var(--bahama-blue-700); }
+  50% { background-color: var(--bahama-blue-800); }
+  100% { background-color: var(--bahama-blue-700); }
+}
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--bahama-blue-900);
+  background-color: var(--bahama-blue-100);
+  animation-name: changeBackgroundColor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  background-color: var(--bahama-blue-200);
+}
+
+.header-left,
+.header-right {
+  display: flex;
+}
+
+.header-left {
+  align-items: center;
+}
+
+.header-right {
+  justify-content: flex-end;
+}
+
+.user-icon {
+  max-width: 100px;
+  border-radius: 50%;
+  animation: scaleUp 1s ease-in-out;
+}
+
+.user-info {
+  margin-left: 10px;
+  max-width: 100px;
+}
+
+.user-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--bahama-blue-900);
+  animation: scaleUp 1s ease-in-out;
+}
+
+.user-title {
+  font-size: 20px;
+  color: var(--bahama-blue-900);
+  animation: scaleUp 1s ease-in-out;
+}
+
+.logoIni {
+  max-width: 10%;
+  animation: scaleUp 1s ease-in-out;
+  border-color: var(--bahama-blue-500);
+}
+
+.notification {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  animation: scaleUp 1s ease-in-out;
+}
+
+.cantidad-notificaciones {
+  font-size: 12px;
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+  animation: scaleUp 1s ease-in-out;
+}
+
+.lblNoti{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--bahama-blue-900);
+  background-color: var(--bahama-blue-600);
+  animation: scaleUp 1s ease-in-out;
+  border: 2px solid var(--bahama-blue-500);
+  border-radius: 12px;
+  padding: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom:20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.ajuste{
+  margin-right: 10px;
+  animation: scaleUp 1s ease-in-out;
+}
+/* Main Content */
+
+.main-content {
+  padding: 20px 0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  animation: scaleUp 1s ease-in-out;
+}
+
+.search-icon {
+  max-width: 100%;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  animation: scaleUp 1s ease-in-out
+}
+
+.search-input {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  background-color: var(--bahama-blue-200);
+}
+
+/* UFORMS */
+
+.uforms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.listado-formularios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario {
+  width: 200px;
+  margin: 10px;
+  background-color: var(--bahama-blue-200);
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  animation: slideLeft 1.5s ease-in-out;
+}
+
+.formulario h3 {
+  font-weight: bold;
+}
+
+.estado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Bottom Section */
+
+.bottom-section {
+  padding: 20px 0;
+  background-color: var(--bahama-blue-200);
+  max-width: 100%;
+}
+
+
+.bottom-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  animation: scaleUp 1s ease-in-out;
+}
+
+.bottom-options img {
+  width: 50px !important;
+  height: 50px !important;
+  animation: scaleUp 1s ease-in-out;
+}
+
+.lblEsta {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--bahama-blue-900);
+  animation: scaleUp 1s ease-in-out;
+}
+
+.boton-crear-formulario {
+  background-color: var(--bahama-blue-200);
+  color: var(--bahama-blue-900);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--bahama-blue-200);
+  color: var(--bahama-blue-800);
+  border: 2px solid var(--bahama-blue-700);
+  animation: scaleUp 1s ease-in-out;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.boton-crear-formulario:hover {
+  background-color: var(--bahama-blue-300);
+  border: 2px solid var(--bahama-blue-500);
+  transform: scale(1.05);
+}
+
+/* Animaciones */
+
+@keyframes slideLeft {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}

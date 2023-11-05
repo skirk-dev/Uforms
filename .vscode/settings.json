@@ -1,0 +1,21 @@
+{
+    "cSpell.words": [
+        "empresa",
+        "redirija"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Uforms",
+            "database": "uforms",
+            "username": "root"
+        }
+    ]
+}

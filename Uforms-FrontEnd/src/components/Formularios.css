@@ -1,0 +1,45 @@
+.formularioBto {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.preguntaBto {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.opcionBto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.opcionBto input {
+  margin-right: 10px;
+}
+
+.cajaBto {
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-label input {
+  margin-right: 5px; /* Adjust this margin to your preferred spacing */
+}
