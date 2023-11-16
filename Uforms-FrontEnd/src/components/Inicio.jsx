@@ -12,6 +12,7 @@ const Home = () => {
   const username = queryParams.get('username');
   const [nombreCompleto, setNombreCompleto] = useState(queryParams.get('nombreCompleto') || 'Nombre Completo');
   const [rol, setRol] = useState(queryParams.get('rol') || 'Rol');
+  const [formularios, setFormularios] = useState([]);
 
   useEffect(() => {
     if (username) {
@@ -26,6 +27,20 @@ const Home = () => {
         .catch((error) => console.error('Error:', error));
     }
   }, [username]);
+
+  useEffect(() => {
+    // Realizar la solicitud al servidor para obtener los formularios
+    fetch('http://localhost:4000/formularios')
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          setFormularios(data.formularios);
+        } else {
+          console.error('Error al obtener los formularios:', data.message);
+        }
+      })
+      .catch((error) => console.error('Error:', error));
+  }, []); // El segundo argumento [] significa que se ejecutará solo una vez al montar el componente
 
   const handleNotificaciones = () => {
     setNotificaciones([
@@ -77,39 +92,23 @@ const Home = () => {
       </main>
 
       <section className="uforms">
-        <div className="listado-formularios">
-          <div className="formulario">
-            <h3>Formulario 1</h3>
-            <p>
-              Este es el formulario 1. Es un formulario visible para los estudiantes y está activado para recibir respuestas.
-            </p>
-            <div className="estado">
-              Visible | Activado
-            </div>
-          </div>
-          <div className="formulario">
-            <h3>Formulario 2</h3>
-            <p>
-              Este es el formulario 2. Es un formulario invisible para los estudiantes y está desactivado para recibir respuestas.
-            </p>
-            <div className="estado">
-              Invisible | Desactivado
-            </div>
-          </div>
-          <div className="formulario">
-            <h3>Formulario 3</h3>
-            <p>
-              Este es el formulario 3. Es un formulario visible para los estudiantes y está desactivado para recibir respuestas.
-            </p>
-            <div className="estado">
-              Visible | Desactivado
-            </div>
-          </div>
-          <Button as={Link} to="/Formularios" className="boton-crear-formulario">
-            Crear Formulario
-          </Button>
+  <div className="listado-formularios">
+    {formularios.map((formulario) => (
+      <div className="formulario" key={formulario.ID}>
+        <h3>{formulario.Titulo}</h3>
+        <p>{formulario.Descripcion}</p>
+        <div className="estado">
+          {formulario.Estado === 'Visible' ? 'Visible' : 'Invisible'} |{' '}
+          {formulario.Activado ? 'Activado' : 'Desactivado'}
         </div>
-      </section>
+      </div>
+    ))}
+    <Button as={Link} to={'/formularios'} className="boton-crear-formulario">
+      Crear Formulario
+    </Button>
+  </div>
+</section>
+
 
       <div className="bottom-section">
         <div className="bottom-options">

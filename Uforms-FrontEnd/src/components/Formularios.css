@@ -1,3 +1,26 @@
+
+@import './variables.css';
+
+
+.main-content{
+  align-items: center;
+}
+.Titulo-Formulario{
+  border-radius: 12px;
+  border-color: var(--bahama-blue-700);
+  background-color: var(--bahama-blue-300);
+  width: 50%;
+  align-items: center;
+}
+
+.Desc-Formulario{
+  border-radius: 12px;
+  border-color: var(--bahama-blue-700);
+  background-color: var(--bahama-blue-300);
+  width: 50%;
+  align-items: center;
+}
+
 .formularioBto {
   display: flex;
   flex-direction: column;
@@ -34,6 +57,16 @@
   margin-bottom: 10px;
 }
 
+.respuesta-caja{
+  resize: none;
+  border-radius: 12px;
+  border-color: var(--bahama-blue-700);
+  background-color: var(--bahama-blue-300);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
 .radio-label {
   display: flex;
   align-items: center;
